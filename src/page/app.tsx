@@ -9,6 +9,8 @@ import './app.less';
 import '@/global/style/global.less';
 import RootStore, { Provider } from '@/store/rootStore';
 import { useStore } from '@/hooks/useStore';
+import { VideoPlayer } from './video';
+import { Home } from './home';
 
 /**
  * 这个组件是网页的入口
@@ -19,9 +21,8 @@ export const App: React.FC = () => {
     <Provider value={RootStore}>
       <Router>
         <Switch>
-          <Route path="/" exact>
-            <div>app</div>
-          </Route>
+          <Route path="/" exact component={Home} />
+          <Route path="/video" exact component={VideoPlayer} />
           <Route path="/">
             <Redirect to="/" />
           </Route>

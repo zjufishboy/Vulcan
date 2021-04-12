@@ -4,14 +4,42 @@
 @regular: 400;
 
 // 字号编组
+@level1_font_size: 22px;
+@level1_line_height: 28px;
+@level2_font_size: 20px;
+@level2_line_height: 26px;
+@level3_font_size: 18px;
+@level3_line_height: 24px;
 @level4_font_size: 16px;
 @level4_line_height: 22px;
+@level5_font_size: 14px;
+@level5_line_height: 20px;
 
 // 文字编组
+.level1(@font-weight) {
+  font-weight: @font-weight;
+  font-size: @level1_font_size;
+  line-height: @level1_line_height;
+}
+.level2(@font-weight) {
+  font-weight: @font-weight;
+  font-size: @level2_font_size;
+  line-height: @level2_line_height;
+}
+.level3(@font-weight) {
+  font-weight: @font-weight;
+  font-size: @level3_font_size;
+  line-height: @level3_line_height;
+}
 .level4(@font-weight) {
   font-weight: @font-weight;
   font-size: @level4_font_size;
   line-height: @level4_line_height;
+}
+.level5(@font-weight) {
+  font-weight: @font-weight;
+  font-size: @level5_font_size;
+  line-height: @level5_line_height;
 }
 
 // 颜色编组
