@@ -10,9 +10,31 @@
 .video-button {
   border: none;
   outline: none;
-  width: 120px;
-  height: 120px;
+  background-color: white;
+  width: 160px;
+  height: 80px;
   .flex(row);
-  border-radius: 50%;
+  border-radius: 12px;
   .level3(normal);
+}
+
+.video-container {
+  width: 80vw;
+  border-radius: 20px;
+}
+
+.video-title {
+  .level4(bold);
+}
+.video-operator {
+  width: 80vw;
+  .flex(row,space-between,center);
+  margin-bottom: 10px;
+}
+
+.video-close {
+  .level2(normal);
+  padding: 4px;
+  border-radius: 8px;
+  background-color: white;
 }

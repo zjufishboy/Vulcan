@@ -9,7 +9,7 @@ module.exports = merge(common, {
   plugins: [
     new CleanWebpackPlugin(),
     // 打包后自动生成分析报告
-    new BundleAnalyzerPlugin(),
+    // new BundleAnalyzerPlugin(),
     new MiniCssExtractPlugin({
       //提取css
       filename: '[hash:12].css',
