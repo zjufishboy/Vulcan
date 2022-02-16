@@ -1,10 +1,13 @@
 import { fileSelect } from '@/utils/fileSelect';
 import React from 'react';
 import './index.less';
+import cx from 'classnames';
 
 export const VideoPlayer: React.FC = () => {
   const [url, setUrl] = React.useState('');
   const [name, setName] = React.useState('');
+  const [isDark, setIsDark] = React.useState(false);
+
   const selectFile = async () => {
     const file = await fileSelect(['video/*']);
     const fileName = file.name;
@@ -12,18 +15,32 @@ export const VideoPlayer: React.FC = () => {
     setUrl(newURL);
     setName(fileName);
   };
+
   const close = () => {
     URL.revokeObjectURL(url);
     setUrl('');
     setName('');
   };
+
+  const toggleDarkMode = () => {
+    setIsDark(s => !s);
+  };
+
   return (
-    <div className="page-video">
+    <div
+      className={cx('page-video', {
+        'page-dark': isDark,
+        'page-light': !isDark,
+      })}
+    >
       {url ? (
         <>
           <div className="video-operator">
             <div className="video-title">{name || '未命名视频'}</div>
-            <button className="video-close" onClick={close}>
+            <button className="video-operate-button" onClick={toggleDarkMode}>
+              {isDark ? '开' : '关'}灯
+            </button>
+            <button className="video-operate-button" onClick={close}>
               关闭
             </button>
           </div>

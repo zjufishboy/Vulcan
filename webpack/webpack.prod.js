@@ -1,9 +1,9 @@
-const merge = require('webpack-merge');
+const webpackMerge = require('webpack-merge');
 const common = require('./webpack.common.js');
 const { CleanWebpackPlugin } = require('clean-webpack-plugin');
 const { BundleAnalyzerPlugin } = require('webpack-bundle-analyzer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
-module.exports = merge(common, {
+module.exports = webpackMerge.merge(common, {
   mode: 'production',
   devtool: false,
   plugins: [

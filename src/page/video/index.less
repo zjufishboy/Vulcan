@@ -8,9 +8,9 @@
 }
 
 .video-button {
-  border: none;
+  border: 1px solid black;
   outline: none;
-  background-color: white;
+
   width: 160px;
   height: 80px;
   .flex(row);
@@ -26,15 +26,27 @@
 .video-title {
   .level4(bold);
 }
+
 .video-operator {
   width: 80vw;
   .flex(row,space-between,center);
   margin-bottom: 10px;
 }
 
-.video-close {
+.video-operate-button {
   .level2(normal);
   padding: 4px;
   border-radius: 8px;
+  background-color: transparent;
+}
+
+.page-light {
   background-color: white;
+}
+.page-dark {
+  background-color: black;
+  .video-title,
+  .video-operate-button {
+    color: white;
+  }
 }

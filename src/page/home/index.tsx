@@ -1,5 +1,5 @@
 import React from 'react';
-import { useHistory } from 'react-router';
+import { useNavigate } from 'react-router-dom';
 import './index.less';
 
 const tools = [
@@ -10,9 +10,9 @@ const tools = [
 ];
 
 export const Home: React.FC = () => {
-  const history = useHistory();
+  const navigate = useNavigate();
   const handleJump = (url: string) => () => {
-    history.push(url);
+    navigate(url);
   };
   return (
     <div className="page-home">
