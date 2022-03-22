@@ -19,12 +19,15 @@
 }
 
 .video-container {
-  width: 80vw;
+  max-width: 80vw;
+  max-height: calc(100vh - 64px);
   border-radius: 20px;
 }
 
 .video-title {
   .level4(bold);
+  max-width: calc(100% - 120px);
+  .textEllipsis();
 }
 
 .video-operator {

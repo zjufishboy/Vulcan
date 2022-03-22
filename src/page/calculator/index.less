@@ -1,0 +1,42 @@
+@import '@/global/style/variable.less';
+@import '@/global/style/mixin.less';
+
+.page-calculator {
+  height: 100vh;
+  width: 100vw;
+  .flex(column,flex-end);
+  user-select: none;
+
+  .history {
+    height: 20vh;
+    width: 95vw;
+    .flex(column,flex-end);
+    .last-calc {
+      height: 3vh;
+      width: 100%;
+      .flex(row,flex-end,center);
+      gap: 8px;
+      font-size: 20px;
+      color: gray;
+    }
+    .result {
+      height: 7vh;
+      width: 100%;
+      .flex(row,flex-end);
+      font-size: 24px;
+      font-weight: bold;
+      color: black;
+    }
+  }
+
+  .operator-area {
+    vertical-align: middle;
+    width: 95vw;
+    height: 70vh;
+    border-top: 1px solid fade(gray, 30%);
+    .flex(row,flex-start,flex-start);
+    flex-wrap: wrap;
+    font-size: 22px;
+    font-family: monospace;
+  }
+}

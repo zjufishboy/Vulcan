@@ -1,0 +1,44 @@
+@import '@/global/style/variable.less';
+@import '@/global/style/mixin.less';
+
+.operator-item {
+  width: 20%;
+  height: 10vh;
+  .flex();
+
+  .item-content {
+    height: 10vw;
+    width: 10vw;
+    border-radius: 50%;
+    .flex();
+    animation: all 0.2s ease;
+    &.operator-active {
+      transform: scale(0.9);
+      background-color: fade(gray, 5%);
+    }
+    &.operator-light {
+      color: gray;
+      font-size: 18px;
+    }
+    &.operator-back {
+      .operator-item-back {
+        height: 10vw;
+        width: 10vw;
+        background-color: orange;
+        color: white;
+        font-weight: bold;
+        border-radius: 50%;
+        font-size: 24px;
+        .flex();
+      }
+    }
+    &.operator-char {
+      color: orange;
+      font-weight: bold;
+      font-size: 24px;
+    }
+    &.operator-normal {
+      font-weight: bold;
+    }
+  }
+}

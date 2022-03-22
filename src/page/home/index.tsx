@@ -4,8 +4,12 @@ import './index.less';
 
 const tools = [
   {
-    name: 'Akua播放器',
+    name: '视频播放器',
     url: '/video',
+  },
+  {
+    name: '计算器',
+    url: '/calculator',
   },
 ];
 

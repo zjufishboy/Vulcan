@@ -15,9 +15,9 @@ module.exports = webpackMerge.merge(common, {
       filename: '[hash:12].css',
     }),
   ],
-  optimization: {
-    splitChunks: {
-      chunks: 'all',
-    },
-  },
+  // optimization: {
+  //   splitChunks: {
+  //     chunks: 'all',
+  //   },
+  // },
 });

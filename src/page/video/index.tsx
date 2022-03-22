@@ -2,11 +2,13 @@ import { fileSelect } from '@/utils/fileSelect';
 import React from 'react';
 import './index.less';
 import cx from 'classnames';
+import { isMobile } from '@/utils/is-mobile';
 
 export const VideoPlayer: React.FC = () => {
   const [url, setUrl] = React.useState('');
   const [name, setName] = React.useState('');
   const [isDark, setIsDark] = React.useState(false);
+  const videoRef = React.useRef<HTMLVideoElement>();
 
   const selectFile = async () => {
     const file = await fileSelect(['video/*']);
@@ -25,6 +27,20 @@ export const VideoPlayer: React.FC = () => {
   const toggleDarkMode = () => {
     setIsDark(s => !s);
   };
+
+  const handleToggleFullScreen = () => {
+    const isInMobile = isMobile();
+    const isRequestFullScreen = !!document.fullscreenElement;
+    const isVideoTarget = document.fullscreenElement === videoRef.current;
+    console.log({ isInMobile, isRequestFullScreen, isVideoTarget });
+  };
+
+  React.useEffect(() => {
+    document.addEventListener('fullscreenchange', handleToggleFullScreen);
+    return () => {
+      document.removeEventListener('fullscreenchange', handleToggleFullScreen);
+    };
+  }, []);
 
   return (
     <div
@@ -45,11 +61,12 @@ export const VideoPlayer: React.FC = () => {
             </button>
           </div>
           <video
+            ref={videoRef}
             src={url}
             autoPlay
-            controls
+            // controls
             className="video-container"
-            controlsList="nodownload"
+            // controlsList="nodownload"
           />
         </>
       ) : (
