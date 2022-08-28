@@ -322,6 +322,7 @@ export const database: Record<string, PeopleItem> = {
   守林人: {
     name: '守林人',
     tag: [
+      [PeopleTag.爆发],
       [PeopleTag.爆发, PeopleTag.远程位],
       [PeopleTag.爆发, PeopleTag.狙击干员],
     ],

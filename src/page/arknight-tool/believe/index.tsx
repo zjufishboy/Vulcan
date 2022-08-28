@@ -29,7 +29,7 @@ export const BelieveTool: FC = () => {
         </div>
       </div>
       <div className="believe-table">
-        <div className="table-item">
+        <div className="table-item table-head-sticky">
           <div className="table-item-cell">百分比</div>
           <div className="table-item-cell">信赖值</div>
           <div className="table-item-cell">下一级</div>

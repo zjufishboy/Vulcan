@@ -1,3 +1,5 @@
+import { isMobile } from '@/utils/env';
+import classNames from 'classnames';
 import React, { ReactNode, useEffect } from 'react';
 import './index.less';
 
@@ -17,7 +19,9 @@ export const PageContainer: React.FC<PageContainerProps> = ({
   }, []);
 
   return (
-    <div className="page-container">
+    <div
+      className={classNames('page-container', { 'page-in-mobile': isMobile })}
+    >
       <div className="page-content">{children}</div>
     </div>
   );

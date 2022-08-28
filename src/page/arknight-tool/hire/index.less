@@ -1,106 +1,98 @@
-.page-arknight-tool {
-  height: 100vh;
-  width: 100vw;
+.hire-tool {
   display: flex;
-  justify-content: center;
-  align-items: center;
-  background-color: gray;
-  color: white;
-  .tool-content {
-    width: 840px;
-    padding: 20px;
-    height: 840px;
+  flex-direction: column;
+  height: 100%;
 
+  .big-title {
+    font-size: 24px;
+    font-weight: 500;
+    margin-bottom: 20px;
+    text-align: center;
+  }
+
+  .title {
+    font-size: 20px;
+    margin-bottom: 12px;
+  }
+  .tag-list {
+    display: flex;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    gap: 8px;
+    margin-bottom: 20px;
+
+    .tag {
+      padding: 8px;
+      border-radius: 8px;
+      background-color: white;
+      white-space: nowrap;
+      color: black;
+
+      &.tag-selected {
+        background-color: rgb(84, 164, 230);
+        color: white;
+      }
+    }
+
+    .clear-button {
+      flex: 1;
+      display: flex;
+      justify-content: flex-end;
+    }
+  }
+  .result {
+    height: auto;
+    flex: 1;
+    overflow-y: scroll;
+    overflow-y: overlay;
+  }
+  .result-content {
     display: flex;
     flex-direction: column;
+    row-gap: 12px;
 
-    .big-title {
-      font-size: 24px;
-      font-weight: 500;
-      margin-bottom: 20px;
-      text-align: center;
+    &.result-empty {
+      height: 200px;
+      justify-content: center;
+      align-items: center;
     }
 
-    .title {
-      font-size: 20px;
-      margin-bottom: 12px;
-    }
-    .tag-list {
+    .result-item {
+      width: 100%;
       display: flex;
-      justify-content: space-between;
-      flex-wrap: wrap;
-      gap: 8px;
-      margin-bottom: 20px;
 
-      .tag {
-        padding: 8px;
-        border-radius: 8px;
-        background-color: white;
-        white-space: nowrap;
-        color: black;
+      .result-tags {
+        display: flex;
+        column-gap: 10px;
+        margin-right: 20px;
 
-        &.tag-selected {
-          background-color: rgb(84, 164, 230);
-          color: white;
+        .tag {
+          padding: 8px;
+          border-radius: 8px;
+          background-color: white;
+          color: black;
+          white-space: nowrap;
+          height: fit-content;
         }
       }
-
-      .clear-button {
-        flex: 1;
+      .result-people {
         display: flex;
-        justify-content: flex-end;
-      }
-    }
-    .result {
-      display: flex;
-      flex-direction: column;
-      flex: 1;
-      overflow-y: auto;
-      row-gap: 12px;
-
-      &.result-empty {
-        height: 200px;
-        justify-content: center;
         align-items: center;
-      }
+        flex-wrap: wrap;
+        gap: 10px;
 
-      .result-item {
-        width: 100%;
-        display: flex;
+        .people-item {
+          padding: 8px;
+          border-radius: 8px;
+          background-color: white;
+          color: black;
 
-        .result-tags {
-          display: flex;
-          column-gap: 10px;
-          margin-right: 20px;
-
-          .tag {
-            padding: 8px;
-            border-radius: 8px;
-            background-color: white;
-            color: black;
-            white-space: nowrap;
-            height: fit-content;
+          &.people-level-5 {
+            background-color: gold;
           }
-        }
-        .result-people {
-          display: flex;
-          align-items: center;
-          flex-wrap: wrap;
-          gap: 10px;
-
-          .people-item {
-            padding: 8px;
-            border-radius: 8px;
-            background-color: white;
-            color: black;
-
-            &.people-level-5 {
-              background-color: gold;
-            }
-            &.people-level-4 {
-              background-color: purple;
-              color: white;
-            }
+          &.people-level-4 {
+            background-color: purple;
+            color: white;
           }
         }
       }
