@@ -1,0 +1,74 @@
+.page-apex-counter {
+  height: 100vh;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  background-color: #afafaf;
+  .card {
+    height: 270px;
+    width: 640px;
+    background-color: white;
+    border-radius: 12px;
+    display: flex;
+    .image {
+      height: 270px;
+      width: 480px;
+      border-radius: 12px 0 0 12px;
+      object-fit: cover;
+    }
+    .counter {
+      height: 270px;
+      width: 200px;
+      border-radius: 0 12px 12px 0;
+      padding: 12px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: center;
+      .input-area {
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
+        margin-bottom: 10px;
+        width: 100%;
+        input {
+          width: 100%;
+        }
+      }
+      .info-text {
+        font-size: 14px;
+      }
+
+      button {
+        margin-top: 20px;
+        background-color: rgb(24, 144, 255);
+        padding: 4px 20px;
+        border-radius: 4px;
+        color: white;
+        &:active {
+          background-color: rgb(9, 109, 217);
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 640px) {
+  html,
+  body {
+    height: 100%;
+    width: 100vw;
+  }
+  #root {
+    height: 100%;
+    width: 100vw;
+  }
+
+  .page-apex-counter {
+    transform: rotate(90deg);
+    transform-origin: 50vw 50vw;
+    height: 100vw;
+    width: 100vh;
+  }
+}

@@ -4,7 +4,7 @@ const common = require('./webpack.common.js');
 
 module.exports = webpackMerge.merge(common, {
   mode: 'development',
-  devtool: 'inline-source-map',
+  devtool: 'source-map',
   devServer: {
     compress: true, // 启动gzip压缩
     port: 8888,

@@ -1,0 +1,22 @@
+@import '@/global/style/mixin.less';
+
+.page-chess {
+  height: 100vh;
+  width: 100vw;
+  .flex();
+  .chess-container {
+    position: relative;
+  }
+  .chess-info-area {
+    position: absolute;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    .chess-info-container {
+      position: relative;
+      height: 100%;
+      width: 100%;
+    }
+  }
+}

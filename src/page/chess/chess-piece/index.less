@@ -1,0 +1,109 @@
+@import '@/global/style/mixin.less';
+@import '../rate.less';
+
+.site-Y(@x) {
+  &-0 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 0 * (1 + 18)) * @size-rate, px);
+  }
+  &-1 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 1 * (1 + 18)) * @size-rate, px);
+  }
+  &-2 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 2 * (1 + 18)) * @size-rate, px);
+  }
+  &-3 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 3 * (1 + 18)) * @size-rate, px);
+  }
+  &-4 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 4 * (1 + 18)) * @size-rate, px);
+  }
+  &-5 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 5 * (1 + 18) + 9) * @size-rate, px);
+  }
+  &-6 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 6 * (1 + 18) + 9) * @size-rate, px);
+  }
+  &-7 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 7 * (1 + 18) + 9) * @size-rate, px);
+  }
+  &-8 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 8 * (1 + 18) + 9) * @size-rate, px);
+  }
+  &-9 {
+    left: unit((1 / 2 + @x * (1 + 18)) * @size-rate, px);
+    top: unit((1 / 2 + 9 * (1 + 18) + 9) * @size-rate, px);
+  }
+}
+
+.site() {
+  &-0 {
+    .site-Y(0);
+  }
+  &-1 {
+    .site-Y(1);
+  }
+  &-2 {
+    .site-Y(2);
+  }
+  &-3 {
+    .site-Y(3);
+  }
+  &-4 {
+    .site-Y(4);
+  }
+  &-5 {
+    .site-Y(5);
+  }
+  &-6 {
+    .site-Y(6);
+  }
+  &-7 {
+    .site-Y(7);
+  }
+  &-8 {
+    .site-Y(8);
+  }
+}
+
+.chess-piece-container {
+  position: absolute;
+
+  &.chess-site {
+    .site();
+  }
+  .chess-piece {
+    height: unit((1+12+1) * @size-rate, px);
+    width: unit((1+12+1) * @size-rate, px);
+    box-sizing: border-box;
+    border-width: unit(@size-rate, px);
+    border-color: black;
+    border-style: solid;
+    border-radius: 50%;
+    .flex();
+
+    position: relative;
+    left: unit(-((1+12+1) / 2) * @size-rate, px);
+    top: unit(-((1+12+1) / 2) * @size-rate, px);
+
+    background-color: rgb(233, 176, 54);
+
+    font-weight: bold;
+
+    &.red {
+      color: red;
+    }
+
+    &.black {
+      color: black;
+    }
+  }
+}

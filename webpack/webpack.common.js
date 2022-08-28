@@ -7,7 +7,7 @@ module.exports = {
   entry: './src/entry/index.tsx',
   // 输出文件
   output: {
-    filename: '[hash:12].js',
+    filename: '[contenthash:12].js',
     path: path.resolve(__dirname, '../dist'),
     publicPath: '/',
   },

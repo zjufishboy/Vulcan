@@ -5,6 +5,7 @@
   "repository": "git@github.com:zjufishboy/Vulcan.git",
   "author": "zjufishboy <3170101504@zju.edu.cn>",
   "license": "MIT",
+  "type": "commonjs",
   "scripts": {
     "dev": "webpack-dev-server --open --config ./webpack/webpack.dev.js",
     "watch": "webpack --watch --config ./webpack/webpack.prod.js",
@@ -14,6 +15,7 @@
     "clean": "rm -rf ./node_modules && clear"
   },
   "dependencies": {
+    "axios": "^0.26.1",
     "classnames": "^2.2.6",
     "date-fns": "^2.19.0",
     "dom-to-image": "^2.6.0",
