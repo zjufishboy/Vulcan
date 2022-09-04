@@ -28,5 +28,9 @@ export const homeInfo: PageLeadInfo = {
       title: '明日方舟工具集',
       url: '/arknight-tool',
     },
+    {
+      title: '插件化工具',
+      url: '/plugin-tool',
+    },
   ],
 };

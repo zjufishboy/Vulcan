@@ -1,0 +1,49 @@
+@import '../../global/style/mixin.less';
+
+.devtool-button-container {
+  position: fixed;
+  bottom: 20px;
+  right: 20px;
+
+  background-color: transparent;
+
+  border-radius: 8px;
+
+  .devtool-button {
+    height: 32px;
+    padding: 4px 12px;
+    border-radius: 8px;
+
+    outline: none;
+    border: none;
+    margin: 0;
+
+    color: red;
+  }
+}
+
+.devtool-page-container {
+  position: fixed;
+  top: 0;
+  left: 0;
+
+  .full-screen();
+
+  z-index: 1000;
+
+  background-color: fade(black, 40%);
+
+  display: flex;
+  justify-content: center;
+  align-items: center;
+
+  .devtool-page {
+    width: 80%;
+    height: 80%;
+
+    padding: 20px;
+
+    background-color: white;
+    border-radius: 12px;
+  }
+}

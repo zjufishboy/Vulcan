@@ -1,0 +1,33 @@
+@import '../../../global/style/mixin.less';
+
+.timer-page {
+  .full-screen();
+
+  display: flex;
+  align-items: center;
+  justify-content: center;
+
+  .timer-cover {
+    width: 100%;
+    height: 100%;
+
+    backdrop-filter: blur(20px);
+
+    border-radius: 12px;
+
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+    .time-text {
+      z-index: 1;
+      font-size: 120px;
+      color: white;
+
+      font-family: 'PingFang SC';
+      font-weight: bold;
+
+      font-variant-numeric: tabular-nums;
+    }
+  }
+}
