@@ -9,5 +9,13 @@ export const pluginInfo: PageLeadInfo = {
       title: '时间壁纸',
       url: '/time',
     },
+    {
+      title: '屏幕共享',
+      url: '/stream',
+    },
+    {
+      title: '追番日历',
+      url: '/anime-calendar',
+    },
   ],
 };

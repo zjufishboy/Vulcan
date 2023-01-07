@@ -1,0 +1,64 @@
+@import '@/global/style/mixin.less';
+
+.attr-table {
+  width: calc(24px + 54px + 54px * 18);
+
+  background-color: white;
+  border-radius: 10px;
+
+  .table-head {
+    padding-left: calc(24px + 54px);
+
+    .table-head-head {
+      border-top-right-radius: 10px;
+      background-color: rgb(146, 222, 226);
+      height: 24px;
+      .flex();
+    }
+  }
+
+  .table-cell {
+    width: 54px;
+    height: 24px;
+    .flex();
+
+    &.table-cell-highlight {
+      background-color: fade(rgb(227, 148, 57), 50%);
+    }
+
+    &.table-cell-highlight-double {
+      background-color: fade(red, 50%);
+    }
+  }
+
+  .table-row {
+    .flex(row);
+  }
+
+  .attr-label {
+    border-radius: 10px;
+    width: 50px;
+    height: 20px;
+    font-size: 14px;
+    color: white;
+    .flex();
+  }
+
+  .table-content {
+    display: grid;
+    grid-template-columns: repeat(20, 1fr);
+
+    .table-content-head {
+      width: 24px;
+      writing-mode: vertical-rl;
+      background-color: brown;
+
+      border-bottom-left-radius: 10px;
+
+      grid-column: 1;
+      grid-row: 1;
+
+      .flex();
+    }
+  }
+}

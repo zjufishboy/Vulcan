@@ -1,4 +1,4 @@
-import React from 'react';
+import React, { useEffect } from 'react';
 import { BrowserRouter, Route, Navigate, Routes } from 'react-router-dom';
 import RootStore, { Provider } from '@/store/rootStore';
 import { VideoPlayer } from './video';
@@ -14,12 +14,18 @@ import { homeInfo } from './lead-info';
 import { PluginTool } from './plugins';
 import { DevTool } from '@/biz-components/devtool';
 import { useMobile } from '@/hooks/useMobile';
+import { shimGetUserMedia } from '@/utils/user-media';
+import { PokemonTool } from './pokemon-tool';
 
 /**
  * 这个组件是网页的入口
 //  */
 export const App: React.FC = () => {
   useMobile();
+
+  useEffect(() => {
+    shimGetUserMedia(window);
+  }, []);
 
   return (
     <Provider value={RootStore}>
@@ -33,6 +39,7 @@ export const App: React.FC = () => {
           <Route path="/apex-counter" element={<ApexCounter />} />
           <Route path="/html-parser" element={<HtmlParser />} />
           <Route path="/arknight-tool/*" element={<ArknightTool />} />
+          <Route path="/pokemon-tool/*" element={<PokemonTool />} />
           <Route path="/plugin-tool/*" element={<PluginTool />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>

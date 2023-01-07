@@ -1,0 +1,25 @@
+@import '@/global/style/mixin.less';
+
+.attr-row {
+  .flex(row,flex-start,center);
+  column-gap: 10px;
+  row-gap: 10px;
+  flex-wrap: wrap;
+}
+
+.result-table {
+  background-color: white;
+  width: fit-content;
+
+  border-radius: 10px;
+  padding: 10px;
+
+  .flex(column,flex-start,flex-start);
+  row-gap: 10px;
+
+  .result-row {
+    .flex(row,flex-start,center);
+    column-gap: 10px;
+    flex-wrap: wrap;
+  }
+}

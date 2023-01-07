@@ -1,0 +1,15 @@
+@import '../../../global/style/mixin.less';
+
+.screen-stream {
+  .full-screen();
+
+  .flex();
+
+  video {
+    object-fit: contain;
+    object-position: center center;
+
+    height: 100%;
+    width: 100%;
+  }
+}

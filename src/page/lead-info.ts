@@ -29,6 +29,10 @@ export const homeInfo: PageLeadInfo = {
       url: '/arknight-tool',
     },
     {
+      title: '宝可梦工具集',
+      url: '/pokemon-tool',
+    },
+    {
       title: '插件化工具',
       url: '/plugin-tool',
     },
