@@ -365,7 +365,7 @@ export const damageRateMap: Record<IAttribute, Record<IAttribute, number>> = {
   [IAttribute.龙]: {
     [IAttribute.一般]: 1,
     [IAttribute.格斗]: 1,
-    [IAttribute.飞行]: 2,
+    [IAttribute.飞行]: 1,
     [IAttribute.毒]: 1,
     [IAttribute.地面]: 1,
     [IAttribute.岩石]: 1,
@@ -385,7 +385,7 @@ export const damageRateMap: Record<IAttribute, Record<IAttribute, number>> = {
   [IAttribute.恶]: {
     [IAttribute.一般]: 1,
     [IAttribute.格斗]: 1 / 2,
-    [IAttribute.飞行]: 2,
+    [IAttribute.飞行]: 1,
     [IAttribute.毒]: 1,
     [IAttribute.地面]: 1,
     [IAttribute.岩石]: 1,
@@ -405,9 +405,9 @@ export const damageRateMap: Record<IAttribute, Record<IAttribute, number>> = {
   [IAttribute.妖精]: {
     [IAttribute.一般]: 1,
     [IAttribute.格斗]: 2,
-    [IAttribute.飞行]: 2,
+    [IAttribute.飞行]: 1,
     [IAttribute.毒]: 1 / 2,
-    [IAttribute.地面]: 2,
+    [IAttribute.地面]: 1,
     [IAttribute.岩石]: 1,
     [IAttribute.虫]: 1,
     [IAttribute.幽灵]: 1,
