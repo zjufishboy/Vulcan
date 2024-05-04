@@ -17,8 +17,8 @@ export const homeInfo: PageLeadInfo = {
       url: '/chess',
     },
     {
-      title: 'Apex计算器',
-      url: '/apex-counter',
+      title: 'Apex工具',
+      url: '/apex',
     },
     {
       title: '转义工具',
