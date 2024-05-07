@@ -1,6 +1,6 @@
 import { useEffect, useState } from 'react';
 
-const timeFrom = 1714834800000 - 45 * 60 * 1000;
+const timeFrom = 1715105700000 - 60 * 60 * 1000;
 
 export const useControlTimer = () => {
   const [tick, setTick] = useState(() => Date.now());
@@ -15,7 +15,7 @@ export const useControlTimer = () => {
     };
   });
 
-  const tickToNext = 45 * 60 * 1000 - ((tick - timeFrom) % (45 * 60 * 1000));
+  const tickToNext = 60 * 60 * 1000 - ((tick - timeFrom) % (60 * 60 * 1000));
 
   return { tickToNext, tick };
 };

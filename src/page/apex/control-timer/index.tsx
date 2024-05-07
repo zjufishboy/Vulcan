@@ -10,16 +10,21 @@ const getDurationStr = (ms: number) => {
 };
 
 const getCur = (duration: number) => {
-  if (duration > 30 * 60 * 1000) {
-    const rest = duration - 30 * 60 * 1000;
+  if (duration > 45 * 60 * 1000) {
+    const rest = duration - 45 * 60 * 1000;
     const restStr = getDurationStr(rest);
     return `控制模式,还剩${restStr}`;
   }
-  if (duration > 15 * 60 * 1000) {
+  if (duration > 30 * 60 * 1000) {
     return '子弹时间';
+  }
+  if (duration > 15 * 60 * 1000) {
+    return '封锁';
   }
   return '团队死斗';
 };
+
+const locations = ['雷霆堡', '核心', '宙斯站', '骷髅镇'];
 
 export const ControlTimer: FC = () => {
   const { tick, tickToNext } = useControlTimer();
