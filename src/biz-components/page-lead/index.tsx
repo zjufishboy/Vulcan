@@ -20,8 +20,9 @@ interface PageLeadProps {
 
 export const PageLead: React.FC<PageLeadProps> = ({ info }) => {
   const navigate = useNavigate();
-  const handleJump = (url: string) => () => {
+  const handleJump = (url: string, title: string) => () => {
     navigate(url);
+    document.title = title;
   };
 
   return (
@@ -29,23 +30,14 @@ export const PageLead: React.FC<PageLeadProps> = ({ info }) => {
       <div className="list-title">
         {info.title}
         {info.backUrl && (
-          <span
-            className="back-link-text"
-            onClick={() => {
-              navigate(info.backUrl, {});
-            }}
-          >
+          <span className="back-link-text" onClick={handleJump(info.backUrl, info.title)}>
             返回上级
           </span>
         )}
       </div>
       <div className="list-content">
         {info.pages.map((item, index) => (
-          <div
-            className="list-info-item"
-            onClick={handleJump(info.prefix + item.url)}
-            key={index}
-          >
+          <div className="list-info-item" onClick={handleJump(info.prefix + item.url, item.title)} key={index}>
             {item.title}
           </div>
         ))}

@@ -16,6 +16,7 @@ import { useMobile } from '@/hooks/useMobile';
 import { shimGetUserMedia } from '@/utils/user-media';
 import { PokemonTool } from './pokemon-tool';
 import { Apex } from './apex';
+import { Finance } from './finance';
 
 /**
  * 这个组件是网页的入口
@@ -41,6 +42,7 @@ export const App: React.FC = () => {
           <Route path="/arknight-tool/*" element={<ArknightTool />} />
           <Route path="/pokemon-tool/*" element={<PokemonTool />} />
           <Route path="/plugin-tool/*" element={<PluginTool />} />
+          <Route path="/finance/*" element={<Finance />} />
           <Route path="*" element={<Navigate to="/" />} />
         </Routes>
         <DevTool />

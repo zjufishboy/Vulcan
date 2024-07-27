@@ -36,5 +36,9 @@ export const homeInfo: PageLeadInfo = {
       title: '插件化工具',
       url: '/plugin-tool',
     },
+    {
+      title: '金融类工具',
+      url: '/finance',
+    },
   ],
 };
