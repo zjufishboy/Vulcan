@@ -5,6 +5,8 @@ export const YearCounter: FC = () => {
   const [profit, setProfit] = useState(0);
   const [base, setBase] = useState(0);
   const [duration, setDuration] = useState(0);
+  const [start, setStart] = useState('');
+  const [end, setEnd] = useState('');
   const [result, setResult] = useState(null);
   return (
     <div
@@ -36,13 +38,28 @@ export const YearCounter: FC = () => {
         <input type="number" id="duration" value={duration} onChange={e => setDuration(Number(e.target.value))} />
       </div>
 
+      <div>
+        <label htmlFor="start">开始时间：</label>
+        <input type="date" id="start" value={start} onChange={e => setStart(e.target.value)} />
+      </div>
+
+      <div>
+        <label htmlFor="end">结束时间：</label>
+        <input type="date" id="end" value={end} onChange={e => setEnd(e.target.value)} />
+      </div>
+
       <button
         style={{ width: 240, backgroundColor: '#aeaeae', height: 32, borderRadius: 16 }}
         onClick={() => {
-          if (!profit || !base || !duration) {
+          if (!profit || !base || (!duration && !start && !end)) {
             return;
           }
-          const rate = ((profit + base) / base) ** (365 / duration);
+          let calDuration = duration;
+          if (start && end) {
+            calDuration = Math.floor((Number(new Date(end)) - Number(new Date(start))) / (24 * 3600 * 1000));
+            setDuration(calDuration);
+          }
+          const rate = ((profit + base) / base) ** (365 / calDuration);
           setResult(((rate - 1) * 100).toFixed(2));
         }}
       >
